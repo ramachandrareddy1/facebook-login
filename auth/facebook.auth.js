@@ -21,8 +21,8 @@ module.exports = function (passport) {
     },
 
         function (token, refreshToken, profile, done) {
-            console.log('token',token);
-          console.log('profileData',JSON.stringify(profile));
+            //console.log('token',token);
+         // console.log('profileData',JSON.stringify(profile));
             process.nextTick(function () {
                 User.findOne({ 'facebook.id': profile.id }, function (err, user) {
 
@@ -40,6 +40,7 @@ module.exports = function (passport) {
                         newUser.facebook.name = profile.displayName // look at the passport user profile to see how names are returned
                         newUser.facebook.email = (profile.emails &&profile.emails.length && profile.emails[0].value)?profile.emails[0].value:Date.now(); // facebook can return multiple emails so we'll take the first
                         newUser.facebook.imageUrl=(profile.photos &&profile.photos.length && profile.photos[0].value)?profile.photos[0].value:Date.now();
+                        console.log('new user+++',JSON.stringify(newUser));
                         newUser.save(function (err) {
                             if (err)
                                 throw err;
