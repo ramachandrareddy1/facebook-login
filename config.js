@@ -5,7 +5,7 @@ module.exports={
     "facebook":{
         "app_id":"480772582659827",
         "app_secret":"5363ee61bec73700c725d446b3169ed8",
-        "callback":"http://localhost:3000/auth/facebook/callback"
+        "callback":"https://damp-dusk-58554.herokuapp.com/auth/facebook/callback"
     }
 
 }
