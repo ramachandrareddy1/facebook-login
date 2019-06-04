@@ -1,5 +1,5 @@
 module.exports={
-    "port":3000,
+    "port":1999,
     "dbUrl":'mongodb://localhost/facebook',
     "cookieSecret":"dfkjdlsfjljklsdfj",
     "facebook":{
