@@ -45,7 +45,7 @@ app.use('/',user);
 
 app.listen(process.env.PORT || port, (err) => {
     if (err) console.log(err);
-    else console.log('server running on the port:', 3000)
+    else console.log('server running on the port:', port)
 });
 
 
